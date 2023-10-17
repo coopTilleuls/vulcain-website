@@ -5,7 +5,7 @@ const fs = require('fs-extra');
 
 const rootPath = path.resolve(__dirname, '../');
 
-async function cloneDocumentation() {
+async function prebuild() {
   try {
     if (fs.existsSync(`${rootPath}/tempRepo`)) fs.removeSync(`${rootPath}/tempRepo`);
     if (fs.existsSync(`${rootPath}/docs`)) fs.removeSync(`${rootPath}/docs`);
@@ -17,10 +17,16 @@ async function cloneDocumentation() {
     await fs.copySync('tempRepo/README.md', `${rootPath}/docs/README.md`);
     await fs.copySync('tempRepo/spec', `${rootPath}/spec`);
     await fs.copySync('tempRepo/schemas', `${rootPath}/public/img/schemas`);
+
     fs.removeSync('tempRepo');
+
+    // update css
+    const data = fs.readFileSync(`${rootPath}/styles/fonts.css`, 'utf8');
+    const modifiedData = data.replace(new RegExp('/fonts/', 'g'), `${process.env.NEXT_PUBLIC_BASE_URL || ''}/fonts/`);
+    fs.writeFileSync(`${rootPath}/styles/fonts.css`, modifiedData, 'utf8');
   } catch (error) {
     console.error(error);
   }
 }
 
-cloneDocumentation();
+prebuild();

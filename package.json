@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prebuild": "node utils/clone-documentation.js",
+    "prebuild": "node utils/prebuild.js",
     "export": "next export"
   },
   "dependencies": {
