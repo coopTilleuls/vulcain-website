@@ -153,16 +153,22 @@ const Animation: React.ComponentType = () => {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href="/img/main-schema/base.svg" />
-        <link rel="preload" as="image" href="/img/main-schema/API.svg" />
+        <link rel="preload" as="image" href={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/base.svg`} />
+        <link rel="preload" as="image" href={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/API.svg`} />
       </Head>
       <Box pl={2} pr={6} position="relative">
         <Paper elevation={20} square className={classes.root} ref={container} id="container">
           <Box position="relative">
-            <img className={classes.base} src={'/img/main-schema/base.svg'} alt="main" width="800" height="821" />
+            <img
+              className={classes.base}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/base.svg`}
+              alt="main"
+              width="800"
+              height="821"
+            />
             <img
               className={classes.animated}
-              src={`/img/main-schema/${method.folder}/step1.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step1.svg`}
               alt="step1"
               id="step1"
               width="800"
@@ -170,7 +176,7 @@ const Animation: React.ComponentType = () => {
             />
             <img
               className={classes.animated}
-              src={`/img/main-schema/${method.folder}/step2.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step2.svg`}
               alt="step2"
               id="step2"
               width="800"
@@ -178,7 +184,7 @@ const Animation: React.ComponentType = () => {
             />
             <img
               className={classes.animated}
-              src={`/img/main-schema/${method.folder}/step2-base.svg`}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step2-base.svg`}
               alt="step2 circle"
               id="step2-base"
               width="800"
@@ -187,7 +193,7 @@ const Animation: React.ComponentType = () => {
             {method.steps > 2 && (
               <img
                 className={classes.animated}
-                src={`/img/main-schema/${method.folder}/step3.svg`}
+                src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step3.svg`}
                 alt="step3"
                 id="step3"
                 width="800"
@@ -198,7 +204,7 @@ const Animation: React.ComponentType = () => {
               <>
                 <img
                   className={classes.animated}
-                  src={`/img/main-schema/${method.folder}/step4.svg`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step4.svg`}
                   alt="step4"
                   id="step4"
                   width="800"
@@ -206,7 +212,7 @@ const Animation: React.ComponentType = () => {
                 />
                 <img
                   className={classes.animated}
-                  src={`/img/main-schema/${method.folder}/step4-base.svg`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/${method.folder}/step4-base.svg`}
                   alt="step4 circle"
                   id="step4-base"
                   width="800"
@@ -218,7 +224,7 @@ const Animation: React.ComponentType = () => {
           <MethodSelector method={methodKey} onMethodChange={(method) => setMethodKey(method)} />
         </Paper>
         <Paper elevation={5} square className={classes.api} id="api">
-          <img src="/img/main-schema/API.svg" alt="api" width="493" height="904" />
+          <img src={`${process.env.NEXT_PUBLIC_BASE_URL}/img/main-schema/API.svg`} alt="api" width="493" height="904" />
         </Paper>
       </Box>
     </>

@@ -64,7 +64,7 @@ const Markdown: React.ComponentType<MarkdownProps> = ({ source }) => {
       return input;
     }
     if (/^schemas\/vulcain_doc/.test(input)) {
-      const result = input.replace('schemas', '/img/schemas');
+      const result = input.replace('schemas', `${process.env.NEXT_PUBLIC_BASE_URL}/img/schemas`);
       return result;
     }
     return `https://raw.githubusercontent.com/dunglas/vulcain/master/${input}`;

@@ -39,13 +39,48 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>Vulcain.rocks: Use HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs</title>
-        <link rel="preload" href="/fonts/roboto/roboto-v20-latin-regular.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/roboto/roboto-v20-latin-500.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/roboto/roboto-v20-latin-700.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/montserrat/montserrat-v15-latin-200.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/montserrat/montserrat-v15-latin-600.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/montserrat/montserrat-v15-latin-800.woff2" as="font" crossOrigin="" />
-        <link rel="preload" href="/fonts/montserrat/montserrat-v15-latin-regular.woff2" as="font" crossOrigin="" />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/roboto/roboto-v20-latin-regular.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/roboto/roboto-v20-latin-500.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/roboto/roboto-v20-latin-700.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/montserrat/montserrat-v15-latin-200.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/montserrat/montserrat-v15-latin-600.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/montserrat/montserrat-v15-latin-800.woff2`}
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/montserrat/montserrat-v15-latin-regular.woff2`}
+          as="font"
+          crossOrigin=""
+        />
         <meta
           name="description"
           content="Vulcain is a brand new protocol using HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs."
@@ -68,10 +103,10 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
           content="Use HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs"
         />
         <meta name="twitter:image" content="https://vulcain.rocks/opengraph.png" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest"></link>
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_URL}/favicon.ico`} />
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_URL}/icon.svg`} type="image/svg+xml" />
+        <link rel="apple-touch-icon" href={`${process.env.NEXT_PUBLIC_BASE_URL}/apple-touch-icon.png`} />
+        <link rel="manifest" href={`${process.env.NEXT_PUBLIC_BASE_URL}/site.webmanifest`}></link>
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </Head>

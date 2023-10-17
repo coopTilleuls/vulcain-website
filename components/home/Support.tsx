@@ -38,7 +38,7 @@ const useStyles = makeStyles<Theme>((theme) => ({
     border: `8px solid ${theme.palette.primary.dark}`,
   },
   image: {
-    background: `url("/img/help.svg")`,
+    background: `url("${process.env.NEXT_PUBLIC_BASE_URL}/img/help.svg")`,
     backgroundPosition: '0 center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'auto 100%',
@@ -110,7 +110,13 @@ const SupportCard: React.ComponentType<SupportCardProps> = ({ image, title, desc
         <CardContent className={classes.cardMain}>
           <Box px={2} display="flex" alignItems="center" justifyContent="center">
             <div className={classes.cardCircle}>
-              <img src={image} alt={title} className={classes.cardImage} width="150" height="150" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_URL}${image}`}
+                alt={title}
+                className={classes.cardImage}
+                width="150"
+                height="150"
+              />
             </div>
           </Box>
           <Box py={2} className={classes.cardContent}>

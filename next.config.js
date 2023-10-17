@@ -1,13 +1,9 @@
 const nextConfig = {
-  assetPrefix: '/vulcain-website/',
-  basePath: "/vulcain-website",
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/vulcain-website/' : '/',
+  basePath: process.env.NODE_ENV === 'production' ? '/vulcain-website' : '',
   images: {
     unoptimized: true,
   },
-  experimental: {
-    assetPrefix: '/vulcain-website/',
-    basePath: "/vulcain-website",
-  }
 };
 
 module.exports = nextConfig;

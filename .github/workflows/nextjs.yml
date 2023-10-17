@@ -42,6 +42,8 @@ jobs:
         run: pnpm install
       - name: Build with Next.js
         run: pnpm run prebuild && pnpm run build && pnpm run export && touch ./out/.nojekyll
+        env:
+          NEXT_PUBLIC_BASE_URL: /vulcain-website
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
