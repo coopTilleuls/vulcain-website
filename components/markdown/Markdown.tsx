@@ -116,6 +116,7 @@ const Markdown: React.ComponentType<MarkdownProps> = ({ source }) => {
           );
         },
         h1: ({ children }) => <Typography variant="h1">{children}</Typography>,
+        // @ts-ignore
         h2: Heading,
         p: (props) => {
           // @ts-ignore
