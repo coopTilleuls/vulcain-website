@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
       - uses: pnpm/action-setup@v2
@@ -43,7 +43,7 @@ jobs:
       - name: Build with Next.js
         run: pnpm run prebuild && pnpm run build && pnpm run export && touch ./out/.nojekyll
         env:
-          NEXT_PUBLIC_BASE_URL: /vulcain-website
+          NEXT_PUBLIC_BASE_URL: /
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
