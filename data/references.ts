@@ -8,7 +8,7 @@ export const logos = [
   {
     name: 'Caddy',
     logo: 'caddy',
-    url: '/docs/caddy',
+    url: '/docs/gateway/caddy',
     external: false,
   },
   {
@@ -20,13 +20,13 @@ export const logos = [
   {
     name: 'Api Platform',
     logo: 'api-platform',
-    url: 'https://api-platform.com/',
+    url: 'https://api-platform.com/docs/distribution/caddy/',
     external: true,
   },
   {
     name: 'Symfony',
     logo: 'symfony',
-    url: 'https://github.com/symfony/symfony',
+    url: 'https://github.com/dunglas/symfony-docker',
     external: true,
   },
 ];

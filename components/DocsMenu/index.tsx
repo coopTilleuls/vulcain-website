@@ -103,9 +103,10 @@ const DocsMenu: React.ComponentType = () => {
         </ListItem>
         <Collapse in={openGateway} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <MenuLink text="Install" href="/docs/gateway/install" className={classes.nested} />
-            <MenuLink text="Configuration" href="/docs/gateway/config" className={classes.nested} />
+            <MenuLink text="Install" href="/docs/gateway/caddy" />
             <MenuLink text="OpenAPI" href="/docs/gateway/openapi" className={classes.nested} />
+            <MenuLink text="Legacy server" href="/docs/gateway/install" className={classes.nested} />
+            <MenuLink text="Legacy config" href="/docs/gateway/config" className={classes.nested} />
           </List>
         </Collapse>
 
@@ -116,7 +117,6 @@ const DocsMenu: React.ComponentType = () => {
           href="/docs/graphql#using-graphql-as-query-language-for-vulcain"
         />
 
-        <MenuLink text="Vulcain for Caddy" href="/docs/caddy" />
 
         <MenuLink text="Cache Considerations" href="/docs/cache" />
 
