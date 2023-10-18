@@ -49,7 +49,7 @@ const footers = [
     title: 'Vulcain',
     content: {
       'Get Started': '/docs',
-      Gateway: '/docs/gateway/install',
+      Gateway: '/docs/gateway/caddy',
     },
   },
   {
