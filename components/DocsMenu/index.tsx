@@ -117,7 +117,6 @@ const DocsMenu: React.ComponentType = () => {
           href="/docs/graphql#using-graphql-as-query-language-for-vulcain"
         />
 
-
         <MenuLink text="Cache Considerations" href="/docs/cache" />
 
         <MenuLink text="Help" href="/docs/help" />

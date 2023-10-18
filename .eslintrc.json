@@ -1,6 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": ["plugin:react/recommended", "plugin:prettier/recommended", "plugin:jsx-a11y/recommended", "prettier/react"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier/react"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off"
   },
@@ -15,9 +20,7 @@
         "@typescript-eslint/no-unused-vars": ["error"],
         "@typescript-eslint/no-explicit-any": "off"
       },
-      "extends": [
-        "plugin:@typescript-eslint/recommended"
-      ]
+      "extends": ["plugin:@typescript-eslint/recommended"]
     }
   ],
   "globals": {

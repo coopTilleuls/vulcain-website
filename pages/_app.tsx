@@ -90,10 +90,7 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:url" content="https://vulcain.rocks" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Vulcain.rocks" />
-        <meta
-          property="og:description"
-          content="Use preloading to create fast and idiomatic client-driven REST APIs"
-        />
+        <meta property="og:description" content="Use preloading to create fast and idiomatic client-driven REST APIs" />
         <meta property="og:image" content="https://vulcain.rocks/opengraph.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@dunglas" />

@@ -50,8 +50,8 @@ const Main: React.ComponentType = () => {
                 client-driven hypermedia APIs
               </Typography>
               <Typography paragraph>
-                Vulcain is a brand new protocol using preload hints, Early Hints or HTTP/2 Server Push to create fast and idiomatic{' '}
-                <strong>client-driven REST</strong> APIs.
+                Vulcain is a brand new protocol using preload hints, Early Hints or HTTP/2 Server Push to create fast
+                and idiomatic <strong>client-driven REST</strong> APIs.
               </Typography>
               <Typography paragraph>
                 An open source gateway server which you can put on top of <strong>any existing web API</strong> to
