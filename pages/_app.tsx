@@ -38,7 +38,7 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Vulcain.rocks: Use HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs</title>
+        <title>Vulcain.rocks: Use preloading to create fast and idiomatic client-driven REST APIs</title>
         <link
           rel="preload"
           href={`${process.env.NEXT_PUBLIC_BASE_URL}/fonts/roboto/roboto-v20-latin-regular.woff2`}
@@ -83,7 +83,7 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
         />
         <meta
           name="description"
-          content="Vulcain is a brand new protocol using HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs."
+          content="Vulcain is a brand new protocol using preloading to create fast and idiomatic client-driven REST APIs."
         />
         <meta name="application-name" content="Vulcain"></meta>
         <meta name="theme-color" content="#f5731b" />
@@ -92,7 +92,7 @@ const App: React.ComponentType<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:title" content="Vulcain.rocks" />
         <meta
           property="og:description"
-          content="Use HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs"
+          content="Use preloading to create fast and idiomatic client-driven REST APIs"
         />
         <meta property="og:image" content="https://vulcain.rocks/opengraph.png" />
         <meta name="twitter:card" content="summary_large_image" />
