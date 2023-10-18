@@ -1,6 +1,6 @@
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/vulcain-website/' : '/',
-  basePath: process.env.NODE_ENV === 'production' ? '/vulcain-website' : '',
+  assetPrefix: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+  basePath: '',
   images: {
     unoptimized: true,
   },
