@@ -43,7 +43,7 @@ jobs:
       - name: Build with Next.js
         run: pnpm run prebuild && pnpm run build && pnpm run export && touch ./out/.nojekyll
         env:
-          NEXT_PUBLIC_BASE_URL: /
+          NEXT_PUBLIC_BASE_URL: https://vulcain.rocks
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
