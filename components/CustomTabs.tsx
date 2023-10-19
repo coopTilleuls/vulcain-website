@@ -41,10 +41,14 @@ const useTabsStyles = makeStyles<Theme>((theme) => ({
     },
   },
 }));
-const useTabItemStyles = makeStyles<Theme>(() => ({
+const useTabItemStyles = makeStyles<Theme>((theme) => ({
   root: {
     minHeight: 30,
     minWidth: 100,
+    [theme.breakpoints.down('md')]: {
+      minWidth: 60,
+      fontSize: '12px',
+    },
   },
   wrapper: {
     textTransform: 'initial',
