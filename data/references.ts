@@ -20,7 +20,7 @@ export const logos = [
   {
     name: 'Api Platform',
     logo: 'api-platform',
-    url: 'https://api-platform.com/docs/distribution/caddy/',
+    url: 'https://api-platform.com/docs/symfony/caddy/',
     external: true,
   },
   {
