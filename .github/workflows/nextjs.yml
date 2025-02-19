@@ -32,12 +32,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
-      - uses: pnpm/action-setup@v2
+        uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v4
         with:
-          version: 6.0.2
+          version: 6
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
@@ -45,7 +45,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_URL: https://vulcain.rocks
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
@@ -59,4 +59,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
